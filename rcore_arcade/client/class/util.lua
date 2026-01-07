@@ -37,7 +37,7 @@ function playerBuyTicketMenu()
 
     for k, v in ipairs(Config.ticketPrice) do
         index = index + 1
-        ticketMenu.AddItem(index, { _U("ticket_label", v.label), " <span style='color: green;'>$" .. CommaValue(v.price) .. "</span>" }, function()
+        ticketMenu.AddItem(index, { _U("ticket_label", v.label), "$" .. CommaValue(v.price) }, function()
             TriggerServerEvent("rcore_arcade:buyTicket", k)
             ticketMenu.Destroy()
 
